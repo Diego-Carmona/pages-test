@@ -1,0 +1,48 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+TailWind no es muy bonito para aplicaciones grandes */
+:root{
+  --bg1:#000723;
+  --bg2:#E7EFEF;
+  --text: black;
+  --textSoft: white;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bg2);
+  background-position: center;
+  color: var(--text);
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar{
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(227, 227, 227, 0.8); 
+}
+
+.container{
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer{
+  bottom: 0;
+}

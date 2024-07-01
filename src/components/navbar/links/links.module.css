@@ -1,0 +1,97 @@
+/* Main Links */
+.links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--textSoft);
+}
+
+/* Logout Button */
+.logout {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text);
+    background-color: var(--bg2);
+    border-radius: 15px;
+    border: none;
+}
+
+/* Menu Button */
+.menuButton {
+    margin-right: 40px;
+    display: none;
+}
+
+.menuIcon{
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Mobile Links Container */
+.mobileLinks {
+    display: none;
+    border-radius: 15px;
+    opacity: 0.95;
+    margin-right: 5px;
+}
+
+/*Responsive Design*/
+@media (max-width: 1300px) {
+    /* Hide Main Links */
+    .links {
+        display: none;
+    }
+
+    /* Display Menu Button */
+    .menuButton {
+        width: 50px;
+        height: 50px;
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--textSoft);
+    }
+
+    /* Mobile Links Styling */
+    .mobileLinks {
+        position: absolute;
+        top: 105px; 
+        width: 170px;
+        height: 460px;
+        right: 0;
+        background-color: var(--bg1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        z-index: 10;
+        color: var(--textSoft);
+        opacity: 0; 
+        visibility: hidden; 
+        transition: opacity 0.3s ease, visibility 0s linear 0.3s; 
+    }
+    
+    .mobileLinks.open {
+        opacity: 0.95; 
+        visibility: visible; 
+        transition: opacity 0.3s ease, visibility 0s linear;    
+    }
+}
+
+
+/* Hover Effect for Links */
+.links a:hover,
+.mobileLinks a:hover {
+    font-size: 1.1em; /* Increase font size on hover */
+    font-weight: bold; /* Make font bold on hover */
+}
+
+/* Active Link Styling */
+.links a.active,
+.mobileLinks a.active {
+    border-bottom: 2px solid var(--textSoft);
+}
